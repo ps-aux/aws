@@ -1,0 +1,9 @@
+version: '3'
+services:
+    kops:
+        build: .
+        volumes:
+            - $HOME/.aws:/root/.aws
+            - $HOME/.ssh:/root/.ssh:ro
+        hostname: kops
+        
